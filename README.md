@@ -95,12 +95,13 @@ From your application redirect to **https://partners.{{ENVIRONMENT}}.in** along 
 Once your user is redirected to our SNBL web app users will be able to view the product details, choose payment method, pay the upfront payment (if any), complete their kyc and set up the auto debit payment. Upon successfully completion of the flow users will be redirected to the url which will be provided by you to our SPOC during onboarding.
 
 **Example Callback redirection:**
-`https://yourwebsite.com?status={{status}}&message={{message}}&saving_goal_id={{saving_goal_id}}&product_id={{product_id}}`
+`https://yourwebsite.com?status={{status}}&message={{message}}&uuid={{uuid}}&saving_goal_id={{saving_goal_id}}&product_id={{product_id}}`
 
 | param | description 
 | ---- |:-------:|
 | status | Status of the fulfillment **(success/error)** |
 | messsage | Explanatory message for success or error  |
+| uuid | unique id for the user in our system |
 | saving_goal_id | unique id for the goal created in our system |
 | product_id | product catalog id stored in our system |
 
@@ -125,11 +126,12 @@ From your application redirect to **https://partners.{{ENVIRONMENT}}.in** along 
 Once your user is redirected to our SNBL web app users will be able to view the product details, choose payment method, pay the upfront payment (if any), complete their kyc and set up the auto debit payment. Upon successfully completion of the flow users will be redirected to the url which will be provided by you to our SPOC during onboarding.
 
 **Example Callback redirection:**
-`https://yourwebsite.com?status={{status}}&message={{message}}&saving_goal_id={{saving_goal_id}}&product_id={{product_id}}`
+`https://yourwebsite.com?status={{status}}&message={{message}}&uuid={{uuid}}&saving_goal_id={{saving_goal_id}}&product_id={{product_id}}`
 
 | param | description 
 | ---- |:-------:|
 | status | Status of the fulfillment **(success/error)** |
 | messsage | Explanatory message for success or error  |
+| uuid | unique id for the user in our system |
 | saving_goal_id | unique id for the goal created in our system |
 | product_id | product catalog id stored in our system |
