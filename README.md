@@ -81,7 +81,7 @@ Body:
 
 From your application redirect to **https://partners.{{ENVIRONMENT}}.in** along with **partner_access_key**, **user_identity_token**, **uuid** and **product_id** as query params.
 
-**Example:** `https://{{ENVIRONMENT}}.savvyapp.in?partner_access_key=xxxx&user_identity_token=xxxxx&uuid=xxxxx&product_id=xxxx`
+**Example:** `https://partners.{{ENVIRONMENT}}.in?partner_access_key=xxxx&user_identity_token=xxxxx&uuid=xxxxx&product_id=xxxx`
 
 | param | example | mandatory| description |
 | ---- | ---- | -- |:-------:|
