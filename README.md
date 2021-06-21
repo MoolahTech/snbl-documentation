@@ -75,18 +75,19 @@ Body:
 | uuid | string | abcd-efg-hijk-xyz |
 
 ### Usage
-**STAGING ENDPOINT**: https://partners-uat.savvyapp.in
+**STAGING ENDPOINT**: https://partners.thesavvyapp.in
 
 **PRODUCTION ENDPOINT**: https://partners.savvyapp.in
 
-From your application redirect to **https://{{BASE_URL}}.savvyapp.in** along with **partner_access_key**, **user_identity_token** and **product_id** as query params.
+From your application redirect to **https://partners.{{ENVIRONMENT}}.in** along with **partner_access_key**, **user_identity_token**, **uuid** and **product_id** as query params.
 
-**Example:** `https://{{ENVIRONMENT}}.savvyapp.in?partner_access_key=xxxx&user_identity_token=xxxxx&product_id=xxxx`
+**Example:** `https://{{ENVIRONMENT}}.savvyapp.in?partner_access_key=xxxx&user_identity_token=xxxxx&uuid=xxxxx&product_id=xxxx`
 
 | param | example | mandatory| description |
 | ---- | ---- | -- |:-------:|
 | partner_access_key | abcd-efg-hijk-xyz | Yes | Will be provided by SPOC |
 | user_identity_token | abcd-efg-hijk-xyz | Yes | Should be generate using server to server api call |
+| uuid | abcd-efg-hijk-xyz | Yes | Should be generated using server to server api call |
 | product_id | xxxxx | Yes | Will be provided by SPOC for your internal product |
 | other data | reference=xxxx&.... | Optional | Any other additional params which you need to get it back as the callback params after the SNBL fulfllment |
 
@@ -94,7 +95,7 @@ From your application redirect to **https://{{BASE_URL}}.savvyapp.in** along wit
 Once your user is redirected to our SNBL web app users will be able to view the product details, choose payment method, pay the upfront payment (if any), complete their kyc and set up the auto debit payment. Upon successfully completion of the flow users will be redirected to the url which will be provided by you to our SPOC during onboarding.
 
 **Example Callback redirection:**
-`https://example.com?status={{status}}&message={{message}}&saving_goal_id={{saving_goal_id}}&product_id={{product_id}}`
+`https://yourwebsite.com?status={{status}}&message={{message}}&saving_goal_id={{saving_goal_id}}&product_id={{product_id}}`
 
 | param | description 
 | ---- |:-------:|
@@ -108,12 +109,12 @@ Once your user is redirected to our SNBL web app users will be able to view the 
 This option is for partners whom require minimal to no technical integration, if you are looking for advanced technical integration please go to [SNBL for tech partners](#SNBL-for-tech-partners)
 
 ### Usage
-**STAGING ENDPOINT**: https://partners-uat.savvyapp.in
+**STAGING ENDPOINT**: https://partners.thesavvyapp.in
 **PRODUCTION ENDPOINT**: https://partners.savvyapp.in
 
-From your application redirect to **https://{{BASE_URL}}.savvyapp.in** along with **partner_access_key** and **product_id** as query params.
+From your application redirect to **https://partners.{{ENVIRONMENT}}.in** along with **partner_access_key** and **product_id** as query params.
 
-**Example:** `https://{{ENVIRONMENT}}.savvyapp.in?partner_access_key=xxxx&product_id=xxxx`
+**Example:** `https://partners.{{ENVIRONMENT}}.in?partner_access_key=xxxx&product_id=xxxx`
 
 | param | example | mandatory| description |
 | ---- | ---- | -- |:-------:|
